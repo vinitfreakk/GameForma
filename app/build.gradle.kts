@@ -68,6 +68,12 @@ dependencies {
     //coroutines lifecycle scope
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    // Coroutine Lifecycle Scopes
+
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation("androidx.activity:activity-ktx:1.7.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    
     // LiveData
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
     // Annotation processor
@@ -76,6 +82,8 @@ dependencies {
     //hilt
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+
 }
 
 fun kapt(s: String) {
