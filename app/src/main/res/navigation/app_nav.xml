@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/agents">
+
+    <fragment
+        android:id="@+id/agents"
+        android:name="com.accidentaldeveloper.allaboutvalorant.ui.Agents"
+        android:label="fragment_agents"
+        tools:layout="@layout/fragment_agents" />
+    <fragment
+        android:id="@+id/bundles"
+        android:name="com.accidentaldeveloper.allaboutvalorant.ui.Bundles"
+        android:label="fragment_bundles"
+        tools:layout="@layout/fragment_bundles" />
+    <fragment
+        android:id="@+id/maps"
+        android:name="com.accidentaldeveloper.allaboutvalorant.ui.Maps"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/spray"
+        android:name="com.accidentaldeveloper.allaboutvalorant.ui.Spray"
+        android:label="fragment_spray"
+        tools:layout="@layout/fragment_spray" />
+    <fragment
+        android:id="@+id/weapons"
+        android:name="com.accidentaldeveloper.allaboutvalorant.ui.Weapons"
+        android:label="fragment_weapons"
+        tools:layout="@layout/fragment_weapons" />
+</navigation>

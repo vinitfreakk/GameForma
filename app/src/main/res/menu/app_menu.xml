@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/weapons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/weapon"
+        android:title="Weapons" />
+
+
+    <item
+        android:id="@+id/spray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/spray"
+        android:title="Spray" />
+
+    <item
+        android:id="@+id/agents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/agents"
+        android:title="agents" />
+
+    <item
+        android:id="@+id/bundles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/bunddle"
+        android:title="Bundles" />
+
+    <item
+        android:id="@+id/maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/loc"
+        android:title="Maps" />
+
+
+
+
+
+
+
+</menu>
