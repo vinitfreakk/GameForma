@@ -14,4 +14,5 @@ class Valorant_Repository @Inject constructor(val apiService: ApiService) {
     suspend fun getSprayData() = apiService.getSpray()
 
     suspend fun getBundlesData() = apiService.getBundels()
+
 }
