@@ -9,7 +9,10 @@
     <style name="CustomBottomNavTextAppearance" parent="TextAppearance.AppCompat.Caption">
         <item name="android:fontFamily">@font/valofont</item>
     </style>
-
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <!--<item name="android:color">@color/valo_red</item>-->
+        <item name="android:color">@android:color/transparent</item>
+    </style>
 
     <style name="Theme.AllAboutValorant" parent="Base.Theme.AllAboutValorant" />
 </resources>
