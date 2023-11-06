@@ -5,7 +5,7 @@
         android:id="@+id/weapons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/weapon"
+        android:icon="@drawable/rifle"
         android:title="Weapons" />
 
 
@@ -20,7 +20,7 @@
         android:id="@+id/agents"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/agents"
+        android:icon="@drawable/ghost"
         android:title="agents" />
 
     <item
