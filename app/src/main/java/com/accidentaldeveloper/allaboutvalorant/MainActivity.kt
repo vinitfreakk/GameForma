@@ -10,6 +10,9 @@ import android.view.WindowManager
 import androidx.activity.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.accidentaldeveloper.allaboutvalorant.adapters.MyAdapter
 import com.accidentaldeveloper.allaboutvalorant.databinding.ActivityMainBinding
 import com.accidentaldeveloper.allaboutvalorant.viewmodel.AgentsViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,6 +22,9 @@ import dagger.hilt.android.HiltAndroidApp
 class MainActivity : AppCompatActivity() {
     private val viewmodel: AgentsViewModel by viewModels()
     lateinit var binding: ActivityMainBinding
+    lateinit var recyclerView: RecyclerView
+
+    private val list = listOf<String>("News","Giveaways","PC games","Browser games","Categories")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -26,10 +32,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.bottomNavigationView.itemTextAppearanceActive =
-            R.style.CustomBottomNavTextAppearance
-        binding.bottomNavigationView.itemTextAppearanceInactive =
-            R.style.CustomBottomNavTextAppearance
+        binding.bottomNavigationView.itemTextAppearanceActive = R.style.CustomBottomNavTextAppearance
+        binding.bottomNavigationView.itemTextAppearanceInactive = R.style.CustomBottomNavTextAppearance
 
         val navController = findNavController(R.id.fragment)
         NavigationUI.setupWithNavController(binding.bottomNavigationView, navController)
@@ -71,6 +75,9 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            recyclerView = binding.recyler
+            recyclerView.adapter = MyAdapter(list)
+            recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
 
 
 

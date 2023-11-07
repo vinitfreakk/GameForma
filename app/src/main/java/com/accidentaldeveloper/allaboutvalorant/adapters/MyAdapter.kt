@@ -1,25 +1,31 @@
 package com.accidentaldeveloper.allaboutvalorant.adapters
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.accidentaldeveloper.allaboutvalorant.R
+import org.w3c.dom.Text
 
-class MyAdapter(data:List<String>):RecyclerView.Adapter<MyAdapter.Myviewholder>(){
+class MyAdapter(val data:List<String>):RecyclerView.Adapter<MyAdapter.Myviewholder>(){
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Myviewholder {
-        TODO("Not yet implemented")
-    }
-
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+       val infalter = LayoutInflater.from(parent.context)
+        val view = infalter.inflate(R.layout.uppernavigation,parent,false)
+        return Myviewholder(view)
     }
 
     override fun onBindViewHolder(holder: Myviewholder, position: Int) {
-        TODO("Not yet implemented")
+      holder.items.text = data[position]
     }
-
+    override fun getItemCount(): Int {
+       return data.size
+    }
     class Myviewholder(itemView: View) :RecyclerView.ViewHolder(itemView) {
-
+         val items = itemView.findViewById<TextView>(R.id.tv)
     }
 
 }

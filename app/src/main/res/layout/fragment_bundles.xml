@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/valo_red"
     tools:context=".ui.Bundles">
 
     <androidx.constraintlayout.widget.ConstraintLayout
