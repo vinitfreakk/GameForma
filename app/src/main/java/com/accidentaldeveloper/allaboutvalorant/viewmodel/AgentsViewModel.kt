@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.accidentaldeveloper.allaboutvalorant.models.agent_model.Agents_Response
+import com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.agent_model.Agents_Response
 import com.accidentaldeveloper.allaboutvalorant.repository.Valorant_Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -14,9 +14,9 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AgentsViewModel @Inject constructor(val repository: Valorant_Repository): ViewModel() {
-    private val mutableAgentData = MutableLiveData<Agents_Response>();
+    private val mutableAgentData = MutableLiveData<com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.agent_model.Agents_Response>();
 
-    val liveData:LiveData<Agents_Response> = mutableAgentData
+    val liveData:LiveData<com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.agent_model.Agents_Response> = mutableAgentData
 
     init{
         getAgentData()
