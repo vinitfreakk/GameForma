@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     lateinit var recyclerView: RecyclerView
 
-    private val list = listOf<String>("News","Giveaways","PC games","Browser games","Categories")
+    private val list = listOf<String>("Ne ws","Giveaways","PC games","Browser games","Categories")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -78,11 +78,8 @@ class MainActivity : AppCompatActivity() {
             recyclerView = binding.recyler
             recyclerView.adapter = MyAdapter(list)
             recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-
-
-
             viewmodel.liveData.observe(this, {
-                Log.d("aajana", "onCreate: ${it.data}")
+                Log.d("aajana", "onCreate: ${it.data.get(21)}")
             })
         }
     }
