@@ -14,6 +14,7 @@
         android:layout_marginTop="1dp"
         android:fontFamily="@font/valofont"
         android:padding="15dp"
+        android:textColor="@color/white"
         android:background="@drawable/uppernaviagtionbg"
         />
 </LinearLayout>

@@ -1,22 +1,17 @@
 package com.accidentaldeveloper.allaboutvalorant
 
-import android.content.res.ColorStateList
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.Window
-import android.view.WindowManager
 import androidx.activity.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.accidentaldeveloper.allaboutvalorant.adapters.MyAdapter
+import com.accidentaldeveloper.allaboutvalorant.adapters.MMOAdapter
 import com.accidentaldeveloper.allaboutvalorant.databinding.ActivityMainBinding
 import com.accidentaldeveloper.allaboutvalorant.viewmodel.AgentsViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.HiltAndroidApp
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -76,7 +71,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             recyclerView = binding.recyler
-            recyclerView.adapter = MyAdapter(list)
+            recyclerView.adapter = MMOAdapter(list)
             recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
             viewmodel.liveData.observe(this, {
                 Log.d("aajana", "onCreate: ${it.data.get(21)}")

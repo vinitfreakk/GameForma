@@ -6,9 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.allaboutvalorant.R
-import org.w3c.dom.Text
 
-class MyAdapter(val data:List<String>):RecyclerView.Adapter<MyAdapter.Myviewholder>(){
+class MMOAdapter(val data:List<String>):RecyclerView.Adapter<MMOAdapter.Myviewholder>(){
 
 
 
