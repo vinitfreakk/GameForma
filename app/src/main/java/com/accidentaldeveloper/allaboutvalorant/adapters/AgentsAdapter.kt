@@ -3,6 +3,7 @@ package com.accidentaldeveloper.allaboutvalorant.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +20,7 @@ class AgentsAdapter(val data: List<AgentsAdapterModel>):RecyclerView.Adapter<Age
     }
 
     override fun onBindViewHolder(holder: myAgentsViewHolder, position: Int) {
+
          holder.imageView.setImageResource(data[position].agentImg)
          holder.agentName.text = data[position].agentName
     }
