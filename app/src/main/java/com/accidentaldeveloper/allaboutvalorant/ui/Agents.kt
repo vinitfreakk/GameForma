@@ -22,28 +22,32 @@ class Agents : Fragment() {
     lateinit var binding:FragmentAgentsBinding
     lateinit var recyclerView: RecyclerView
     val agentList = listOf(
-        AgentsAdapterModel("omen", R.drawable.omen1),
-        AgentsAdapterModel("Phoenix", R.drawable.phoniex),
-        AgentsAdapterModel("Reyna", R.drawable.ryena),
-        AgentsAdapterModel("Yoru", R.drawable.yoru),
-        AgentsAdapterModel("Chamber", R.drawable.chamber),
-        AgentsAdapterModel("KAY/O", R.drawable.kayo),
-        AgentsAdapterModel("Astra", R.drawable.astra),
-        AgentsAdapterModel("Neon", R.drawable.neon),
-        AgentsAdapterModel("Skye", R.drawable.skye),
-        AgentsAdapterModel("Raze", R.drawable.raze),
-        AgentsAdapterModel("Jett", R.drawable.jett3),
-        AgentsAdapterModel("Gekko", R.drawable.gekko),
-        AgentsAdapterModel("Breach", R.drawable.breach),
-        AgentsAdapterModel("Killjoy", R.drawable.killjoy),
-        AgentsAdapterModel("Fade", R.drawable.fade),
-        AgentsAdapterModel("Cypher", R.drawable.cypher),
-        AgentsAdapterModel("Viper", R.drawable.viper),
-        AgentsAdapterModel("Sova", R.drawable.sova),
-        AgentsAdapterModel("Sage", R.drawable.sage),
-        AgentsAdapterModel("Harbor", R.drawable.harbor),
-        AgentsAdapterModel("Brimstone", R.drawable.brim),
-        AgentsAdapterModel("ISO", R.drawable.iso)
+        AgentsAdapterModel("Gekko", R.drawable.gekko,"Initiator"),//0
+        AgentsAdapterModel("Fade", R.drawable.fade,"Initiator"),//1
+        AgentsAdapterModel("Breach", R.drawable.breach,"Initiator"),//2
+        AgentsAdapterModel("DeadLock", R.drawable.deadlock,"Sentinel"),//3
+        AgentsAdapterModel("Raze", R.drawable.raze,"Duelist"),//4
+        AgentsAdapterModel("Chamber", R.drawable.chamber,"Sentinel"),//5
+        AgentsAdapterModel("KAY/O", R.drawable.kayo,"Initiator"),//6
+        AgentsAdapterModel("Skye", R.drawable.skye,"Initiator"),//7
+        AgentsAdapterModel("Cypher", R.drawable.cypher,"Sentinel"),//8
+        AgentsAdapterModel("Sova", R.drawable.sova,"Initiator"),//10
+        AgentsAdapterModel("Killjoy", R.drawable.killjoy,"Sentinel"),//11
+        AgentsAdapterModel("Harbor", R.drawable.harbor,"Controller"),//12
+        AgentsAdapterModel("Viper", R.drawable.viper,"Controller"),//13
+        AgentsAdapterModel("Phoenix", R.drawable.phoniex,"Duelist"),//14
+        AgentsAdapterModel("Astra", R.drawable.astra,"Controller"),//15
+        AgentsAdapterModel("Brimstone", R.drawable.brim,"Controller"),//16
+        AgentsAdapterModel("ISO", R.drawable.iso,"Duelist"),//17
+        AgentsAdapterModel("Neon", R.drawable.neon,"Duelist"),//18
+        AgentsAdapterModel("Yoru", R.drawable.yoru,"Duelist"),//19
+        AgentsAdapterModel("Sage", R.drawable.sage,"Sentinel"),//20
+        AgentsAdapterModel("Reyna", R.drawable.ryena,"Duelist"),//21
+        AgentsAdapterModel("omen", R.drawable.omen1,"Controller"),//22
+        AgentsAdapterModel("Jett", R.drawable.jett3,"Duelist"),//23
+
+
+
     )
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
        binding = FragmentAgentsBinding.inflate(layoutInflater,container,false)
