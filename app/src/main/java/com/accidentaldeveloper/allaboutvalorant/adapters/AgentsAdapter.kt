@@ -1,5 +1,6 @@
 package com.accidentaldeveloper.allaboutvalorant.adapters
 
+import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.accidentaldeveloper.allaboutvalorant.Agent_Details_Activity
 import com.accidentaldeveloper.allaboutvalorant.R
 import com.accidentaldeveloper.allaboutvalorant.models.adapterModel.AgentsAdapterModel
 
@@ -32,6 +34,11 @@ class AgentsAdapter(val data: List<AgentsAdapterModel>):RecyclerView.Adapter<Age
         //holder.cardview.setBackgroundResource(ContextCompat.getColor(holder.itemView.context, R.drawable.agentcardbg))
         //holder.linearLayout.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, data[position].bgColor))
         holder.mainlayout.startAnimation(AnimationUtils.loadAnimation(holder.mainlayout.context, R.anim.scale_up))
+        holder.itemView.setOnClickListener{
+            val intent = Intent(holder.itemView.context,Agent_Details_Activity::class.java)
+            intent.putExtra("AGENT_DATA", data[position])
+            holder.itemView.context.startActivity(intent)
+        }
 
 
 
