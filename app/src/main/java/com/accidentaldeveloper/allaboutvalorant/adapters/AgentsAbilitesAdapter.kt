@@ -3,8 +3,10 @@ package com.accidentaldeveloper.allaboutvalorant.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.allaboutvalorant.R
 import com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.agent_model.Ability
@@ -22,6 +24,12 @@ class AgentsAbilitesAdapter(val abilites: List<Ability>) :
         holder.abilites_txt.text = abilites[position].displayName
         holder.abilitesInfo.text = abilites[position].description
        Glide.with(holder.abiliteImage).load(abilites[position].displayIcon).into(holder.abiliteImage)
+        holder.agent_abilites_card.startAnimation(
+            AnimationUtils.loadAnimation(
+                holder.agent_abilites_card.context,
+                R.anim.scale_up
+            )
+        )
     }
 
     override fun getItemCount(): Int {
@@ -32,6 +40,7 @@ class AgentsAbilitesAdapter(val abilites: List<Ability>) :
        val abilites_txt = itemView.findViewById<TextView>(R.id.agent_ablites_name)
         val abilitesInfo  = itemView.findViewById<TextView>(R.id.agent_abilities_data)
         val abiliteImage = itemView.findViewById<ImageView>(R.id.ablites_img)
+        val agent_abilites_card = itemView.findViewById<CardView>(R.id.agent_abilites_card)
     }
 }
 
