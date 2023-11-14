@@ -141,7 +141,7 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/agent_power"
+        android:id="@+id/agent_power_rv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="12dp"

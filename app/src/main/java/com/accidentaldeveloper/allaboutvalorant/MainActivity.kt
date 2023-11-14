@@ -74,7 +74,8 @@ class MainActivity : AppCompatActivity() {
             recyclerView.adapter = MMOAdapter(list)
             recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
             viewmodel.liveData.observe(this, {
-                Log.d("aajana", "onCreate: ${it.data.get(21)}")
+               // Log.d("aajana", "onCreate: ${it.data.get(0).abilities.get(0)}")
+                Log.d("aajana", "onCreate: ${it.data.get(0).abilities}")
             })
         }
     }

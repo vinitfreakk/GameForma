@@ -2,6 +2,7 @@ package com.accidentaldeveloper.allaboutvalorant
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -18,6 +19,8 @@ class Agent_Details_Activity : AppCompatActivity() {
         setContentView(binding.root)
 
         val agentData = intent.getSerializableExtra("AGENT_DATA") as? AgentsAdapterModel
+        val agentIndex = intent?.getIntExtra("AgentIndex",0)
+        Log.d("agentIndex", "onCreate: ${agentIndex}")
 
         val agentImageView = binding.agentimg
         agentImageView.setImageResource(agentData?.agentImg ?: R.drawable.omen1)
