@@ -17,7 +17,7 @@ interface ValorantApiService {
     @GET(AppConstant.BUNDLES_END_POINT)
     suspend fun getBundels():Response<com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.bundle_model.Bundle_Response>
 
-    @GET(AppConstant.AGENT_END_POINT)
+    @GET(AppConstant.MAPS_END_POINT)
     suspend fun getMaps():Response<com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.maps_model.Maps_Response>
 
     @GET(AppConstant.WEAPONS_END_POINT)
