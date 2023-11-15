@@ -3,8 +3,10 @@ package com.accidentaldeveloper.allaboutvalorant.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.allaboutvalorant.R
 import com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.maps_model.Data
@@ -23,6 +25,12 @@ class MapsAdapter(val mapsList: List<Data>) : RecyclerView.Adapter<MapsAdapter.m
     override fun onBindViewHolder(holder: myMapsViewHolder, position: Int) {
          holder.map_name.text = mapsList[position].displayName
         holder.map_info.text =  mapsList[position].narrativeDescription
+        holder.maps_layout.startAnimation(
+            AnimationUtils.loadAnimation(
+                holder.maps_layout.context,
+                R.anim.scale_up
+            )
+        )
         Glide.with(holder.map_image).load(mapsList[position].splash).into(holder.map_image)
     }
 
@@ -34,5 +42,6 @@ class MapsAdapter(val mapsList: List<Data>) : RecyclerView.Adapter<MapsAdapter.m
         val map_image = itemView.findViewById<ImageView>(R.id.map_img)
         val map_name = itemView.findViewById<TextView>(R.id.map_name)
         val map_info = itemView.findViewById<TextView>(R.id.map_info)
+        val maps_layout  = itemView.findViewById<CardView>(R.id.mapslayout)
     }
 }
