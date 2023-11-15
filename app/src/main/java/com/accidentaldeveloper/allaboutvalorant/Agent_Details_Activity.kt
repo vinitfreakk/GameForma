@@ -4,26 +4,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.animation.AnimationUtils
-import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.activity.viewModels
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.allaboutvalorant.adapters.AgentsAbilitesAdapter
 import com.accidentaldeveloper.allaboutvalorant.databinding.ActivityAgentDetailsBinding
-import com.accidentaldeveloper.allaboutvalorant.databinding.ActivityMainBinding
 import com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.agent_model.Ability
 import com.accidentaldeveloper.allaboutvalorant.models.adapterModel.AgentsAdapterModel
-import com.accidentaldeveloper.allaboutvalorant.viewmodel.AgentsViewModel
+import com.accidentaldeveloper.allaboutvalorant.viewmodel.valorantViewModel.AgentsViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.HiltAndroidApp
 
 @AndroidEntryPoint
 class Agent_Details_Activity : AppCompatActivity() {
     lateinit var binding:ActivityAgentDetailsBinding
     lateinit var recyclerView: RecyclerView
-    private val viewmodel:AgentsViewModel by viewModels()
+    private val viewmodel: AgentsViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAgentDetailsBinding.inflate(layoutInflater)

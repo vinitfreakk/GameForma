@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.allaboutvalorant.adapters.MMOAdapter
 import com.accidentaldeveloper.allaboutvalorant.databinding.ActivityMainBinding
-import com.accidentaldeveloper.allaboutvalorant.viewmodel.AgentsViewModel
+import com.accidentaldeveloper.allaboutvalorant.viewmodel.valorantViewModel.AgentsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
