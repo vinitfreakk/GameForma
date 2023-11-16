@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -13,7 +14,7 @@ import com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.maps_model
 import com.bumptech.glide.Glide
 
 
-class MapsAdapter(val mapsList: List<Data>) : RecyclerView.Adapter<MapsAdapter.myMapsViewHolder>() {
+class MapsAdapter(val mapsList: List<Data>,val frameLayout: FrameLayout,val recyclerView: RecyclerView) : RecyclerView.Adapter<MapsAdapter.myMapsViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myMapsViewHolder {
@@ -31,7 +32,21 @@ class MapsAdapter(val mapsList: List<Data>) : RecyclerView.Adapter<MapsAdapter.m
                 R.anim.scale_up
             )
         )
+
         Glide.with(holder.map_image).load(mapsList[position].splash).into(holder.map_image)
+        holder.maps_layout.setOnLongClickListener {
+            recyclerView.suppressLayout(true)
+            recyclerView.alpha = 0.5f
+            frameLayout.visibility = View.VISIBLE
+            true
+        }
+
+
+        frameLayout.setOnClickListener {
+            recyclerView.alpha = 1f
+            recyclerView.suppressLayout(false)
+            frameLayout.visibility = View.GONE
+        }
     }
 
     override fun getItemCount(): Int {
