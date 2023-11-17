@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/preview_card"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/valo_balck"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="20dp"
     android:layout_margin="10dp"
-    android:layout_height="wrap_content">
+    app:cardCornerRadius="24dp">
 
-    <ImageView
-        android:id="@+id/preview_img"
-        android:src="@drawable/omen1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"/>
+
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="sdhfjsadhfjksd"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            />
+
+        <ImageView
+            android:id="@+id/preview_img"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/map"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/sites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sdhfjsadhfjksd"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            />
+    </LinearLayout>
+
+
 </androidx.cardview.widget.CardView>

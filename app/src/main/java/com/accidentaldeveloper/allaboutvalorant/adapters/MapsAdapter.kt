@@ -2,6 +2,8 @@ package com.accidentaldeveloper.allaboutvalorant.adapters
 
 import android.app.AlertDialog
 import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -52,8 +54,21 @@ class MapsAdapter(val mapsList: List<Data>) : RecyclerView.Adapter<MapsAdapter.m
         }*/
 
         holder.maps_layout.setOnClickListener {
-            val builder = AlertDialog.Builder(it.context)
+            val builder = AlertDialog.Builder(it.context,R.style.YourThemeName)
             val dialogView = LayoutInflater.from(it.context).inflate(R.layout.custom_preview,null)
+            val cardView:CardView = dialogView.findViewById(R.id.preview_card)
+            val imageview:ImageView =  dialogView.findViewById(R.id.preview_img)
+            val site:TextView = dialogView.findViewById(R.id.sites)
+            val map_name:TextView = dialogView.findViewById(R.id.map)
+            site.text = "tactical Description ${mapsList[position].tacticalDescription}"
+            map_name.text = mapsList[position].displayName
+            Glide.with(imageview).load(mapsList[position].displayIcon).into(imageview)
+            cardView.startAnimation(
+                AnimationUtils.loadAnimation(
+                    cardView.context,
+                    R.anim.scale_up
+                )
+            )
             builder.setView(dialogView)
             builder.setCancelable(true)
             builder.show()

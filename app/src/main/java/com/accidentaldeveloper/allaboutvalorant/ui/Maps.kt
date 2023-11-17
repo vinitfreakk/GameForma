@@ -21,7 +21,6 @@ class Maps : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentMapsBinding.inflate(layoutInflater,container,false)
         val maps_recyler = binding.mapsRecyclerView
-        val previewContainer = binding.previewContainer
        viewmodel.liveData.observe(viewLifecycleOwner,{maps_response->
            maps_recyler.adapter = MapsAdapter(maps_response.data)
            maps_recyler.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)

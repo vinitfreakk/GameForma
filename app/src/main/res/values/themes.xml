@@ -16,4 +16,10 @@
 
     <style name="Theme.AllAboutValorant" parent="Base.Theme.AllAboutValorant" />
 
+    <style name="YourThemeName" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#CC8800</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+
 </resources>
