@@ -1,14 +1,10 @@
 package com.accidentaldeveloper.allaboutvalorant.adapters
 
 import android.app.AlertDialog
-import android.content.Context
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -16,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.allaboutvalorant.R
 import com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.maps_model.Data
 import com.bumptech.glide.Glide
-import kotlinx.coroutines.NonDisposableHandle.parent
 
 
 class MapsAdapter(val mapsList: List<Data>) : RecyclerView.Adapter<MapsAdapter.myMapsViewHolder>() {
@@ -55,11 +50,11 @@ class MapsAdapter(val mapsList: List<Data>) : RecyclerView.Adapter<MapsAdapter.m
 
         holder.maps_layout.setOnClickListener {
             val builder = AlertDialog.Builder(it.context,R.style.YourThemeName)
-            val dialogView = LayoutInflater.from(it.context).inflate(R.layout.custom_preview,null)
+            val dialogView = LayoutInflater.from(it.context).inflate(R.layout.custom_maps_preview,null)
             val cardView:CardView = dialogView.findViewById(R.id.preview_card)
             val imageview:ImageView =  dialogView.findViewById(R.id.preview_img)
-            val site:TextView = dialogView.findViewById(R.id.sites)
-            val map_name:TextView = dialogView.findViewById(R.id.map)
+            val site:TextView = dialogView.findViewById(R.id.preview_disp)
+            val map_name:TextView = dialogView.findViewById(R.id.preview_name)
             site.text = "tactical Description ${mapsList[position].tacticalDescription}"
             map_name.text = mapsList[position].displayName
             Glide.with(imageview).load(mapsList[position].displayIcon).into(imageview)

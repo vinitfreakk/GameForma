@@ -1,10 +1,12 @@
 package com.accidentaldeveloper.allaboutvalorant.adapters
 
+import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.allaboutvalorant.R
@@ -31,6 +33,24 @@ class BundelsAdapter(val bundellist: List<Data>) :
                 R.anim.scale_up
             )
         )
+        holder.bundle_layout.setOnClickListener {
+            val builder = AlertDialog.Builder(it.context,R.style.YourThemeName)
+            val dialogView = LayoutInflater.from(it.context).inflate(R.layout.custom_bundles_preview,null)
+            val cardView:CardView = dialogView.findViewById(R.id.bundles_preview_card)
+            val imageview:ImageView =  dialogView.findViewById(R.id.bundles_img)
+            val bundel_name: TextView = dialogView.findViewById(R.id.bundles_name)
+            bundel_name.text = bundellist[position].displayName
+            Glide.with(imageview).load(bundellist[position].displayIcon).into(imageview)
+            cardView.startAnimation(
+                AnimationUtils.loadAnimation(
+                    cardView.context,
+                    R.anim.scale_up
+                )
+            )
+            builder.setView(dialogView)
+            builder.setCancelable(true)
+            builder.show()
+        }
 
     }
 

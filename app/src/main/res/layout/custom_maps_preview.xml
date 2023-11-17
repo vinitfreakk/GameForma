@@ -18,15 +18,15 @@
         android:orientation="vertical"
         >
         <TextView
-            android:id="@+id/map"
+            android:id="@+id/preview_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="sdhfjsadhfjksd"
+            android:text=""
             android:layout_marginLeft="15dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:textSize="14sp"
-            android:textColor="@color/white"
+            android:fontFamily="@font/valofont"
+            android:textSize="20sp"
+            android:textColor="@color/valo_red"
             android:textAllCaps="true"
             />
 
@@ -39,10 +39,10 @@
             android:scaleType="centerCrop"/>
 
         <TextView
-            android:id="@+id/sites"
+            android:id="@+id/preview_disp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="sdhfjsadhfjksd"
+            android:text=""
             android:layout_marginTop="10dp"
             android:layout_marginLeft="15dp"
             android:layout_marginBottom="15dp"
