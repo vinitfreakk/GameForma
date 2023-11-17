@@ -5,6 +5,7 @@
     android:id="@+id/bundle_layout"
     app:cardCornerRadius="20dp"
     android:layout_margin="10dp"
+    android:elevation="10dp"
     app:cardBackgroundColor="@color/valo_balck"
     android:layout_height="wrap_content">
 

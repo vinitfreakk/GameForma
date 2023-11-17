@@ -27,12 +27,14 @@ class BundelsAdapter(val bundellist: List<Data>) :
 
     override fun onBindViewHolder(holder: MyBundlesViewHolder, position: Int) {
         Glide.with(holder.bundle_img).load(bundellist[position].displayIcon).into(holder.bundle_img)
-        holder.bundle_layout.startAnimation(
+
+        /*holder.bundle_layout.startAnimation(
             AnimationUtils.loadAnimation(
                 holder.bundle_layout.context,
                 R.anim.scale_up
             )
-        )
+        )*/
+
         holder.bundle_layout.setOnClickListener {
             val builder = AlertDialog.Builder(it.context,R.style.YourThemeName)
             val dialogView = LayoutInflater.from(it.context).inflate(R.layout.custom_bundles_preview,null)
