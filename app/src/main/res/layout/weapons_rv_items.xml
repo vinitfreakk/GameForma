@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/weapons_card"
+    android:layout_width="match_parent"
+     app:cardBackgroundColor="@color/valo_balck"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp">
+
+
+    <ImageView
+        android:id="@+id/weapon_img"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/omen" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/valofont"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:text="weapon"
+                    />
+        </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
