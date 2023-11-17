@@ -1,5 +1,7 @@
 package com.accidentaldeveloper.allaboutvalorant.adapters
 
+import android.app.AlertDialog
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,9 +14,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.allaboutvalorant.R
 import com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.maps_model.Data
 import com.bumptech.glide.Glide
+import kotlinx.coroutines.NonDisposableHandle.parent
 
 
-class MapsAdapter(val mapsList: List<Data>,val frameLayout: FrameLayout,val recyclerView: RecyclerView) : RecyclerView.Adapter<MapsAdapter.myMapsViewHolder>() {
+class MapsAdapter(val mapsList: List<Data>) : RecyclerView.Adapter<MapsAdapter.myMapsViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myMapsViewHolder {
@@ -34,7 +37,7 @@ class MapsAdapter(val mapsList: List<Data>,val frameLayout: FrameLayout,val recy
         )
 
         Glide.with(holder.map_image).load(mapsList[position].splash).into(holder.map_image)
-        holder.maps_layout.setOnLongClickListener {
+        /*holder.maps_layout.setOnLongClickListener {
             recyclerView.suppressLayout(true)
             recyclerView.alpha = 0.5f
             frameLayout.visibility = View.VISIBLE
@@ -46,7 +49,17 @@ class MapsAdapter(val mapsList: List<Data>,val frameLayout: FrameLayout,val recy
             recyclerView.alpha = 1f
             recyclerView.suppressLayout(false)
             frameLayout.visibility = View.GONE
+        }*/
+
+        holder.maps_layout.setOnClickListener {
+            val builder = AlertDialog.Builder(it.context)
+            val dialogView = LayoutInflater.from(it.context).inflate(R.layout.custom_preview,null)
+            builder.setView(dialogView)
+            builder.setCancelable(true)
+            builder.show()
         }
+
+
     }
 
     override fun getItemCount(): Int {
