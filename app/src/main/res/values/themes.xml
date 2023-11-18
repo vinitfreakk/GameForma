@@ -22,4 +22,13 @@
 
     </style>
 
+
+    <style name="BottomCutCornersShape" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">50dp</item>
+    </style>
+
+
+
 </resources>

@@ -26,7 +26,7 @@ class Agent_Details_Activity : AppCompatActivity() {
 
         val agentData = intent.getSerializableExtra("AGENT_DATA") as? AgentsAdapterModel
         val agentIndex = intent.getIntExtra("AgentIndex",0)
-        Log.d("agentIndex", "onCreate: ${agentIndex}")
+        Log.d("agentIndex", "onCreate: ${agentData}")
 
         val agentImageView = binding.agentimg
         agentImageView.setImageResource(agentData?.agentImg ?: R.drawable.omen1)

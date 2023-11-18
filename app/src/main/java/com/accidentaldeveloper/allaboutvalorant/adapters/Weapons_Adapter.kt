@@ -1,5 +1,6 @@
 package com.accidentaldeveloper.allaboutvalorant.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.allaboutvalorant.R
+import com.accidentaldeveloper.allaboutvalorant.Weapons_Deatils_Activity
 import com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_model.Data
 import com.bumptech.glide.Glide
 
@@ -31,6 +33,18 @@ class Weapons_Adapter(val weaponsList: List<Data>):RecyclerView.Adapter<Weapons_
                    R.anim.scale_up
                )
            )
+       /* holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context,Weapons_Deatils_Activity::class.java)
+            intent.putExtra("weapon_data",weaponsList[position])
+            holder.itemView.context.startActivity(intent)
+
+        }*/
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, Weapons_Deatils_Activity::class.java)
+            intent.putExtra("weapon_data", position)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

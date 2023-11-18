@@ -2,6 +2,7 @@ package com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_m
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Data(
     @SerializedName("assetPath")
@@ -24,4 +25,4 @@ data class Data(
     val uuid: String,
     @SerializedName("weaponStats")
     val weaponStats: com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_model.WeaponStats
-)
+): Serializable
