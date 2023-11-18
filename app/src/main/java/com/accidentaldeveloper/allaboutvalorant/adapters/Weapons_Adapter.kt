@@ -1,12 +1,15 @@
 package com.accidentaldeveloper.allaboutvalorant.adapters
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.VideoView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.allaboutvalorant.R
@@ -46,6 +49,9 @@ class Weapons_Adapter(val weaponsList: List<Data>):RecyclerView.Adapter<Weapons_
             intent.putExtra("data",weaponsList[position])
             holder.itemView.context.startActivity(intent)
         }
+
+
+
     }
 
     override fun getItemCount(): Int {
@@ -56,5 +62,6 @@ class Weapons_Adapter(val weaponsList: List<Data>):RecyclerView.Adapter<Weapons_
           val weaponImage = itemView.findViewById<ImageView>(R.id.weapon_img)
           val weaponName = itemView.findViewById<TextView>(R.id.weapon_name)
           val weapon_card = itemView.findViewById<CardView>(R.id.weapons_card)
+
     }
 }

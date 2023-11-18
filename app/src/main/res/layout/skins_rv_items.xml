@@ -2,16 +2,19 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/skins_card"
-    app:cardBackgroundColor="@android:color/transparent"
+    app:cardBackgroundColor="@color/valo_balck"
     app:cardCornerRadius="20dp"
-    android:layout_margin="10dp"
+    android:layout_margin="30dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <com.jackandphantom.carouselrecyclerview.view.ReflectionImageView
         android:id="@+id/gun_skin_img"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="290dp"
-        android:src="@drawable/odin"/>
+        android:layout_gravity="center"
+        android:background="@color/valo_balck"
+       />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +29,7 @@
             android:textSize="14sp"
             android:fontFamily="@font/valofont"
             android:textColor="@color/white"
-            android:layout_margin="5dp"
+            android:layout_margin="16dp"
             />
     </LinearLayout>
 

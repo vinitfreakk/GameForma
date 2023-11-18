@@ -42,6 +42,7 @@ android {
 }
 
 dependencies {
+    val mediaVersion = "1.0.1"
 
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
@@ -90,6 +91,10 @@ dependencies {
 
     //corosoul
     implementation ("com.github.sparrow007:carouselrecyclerview:1.2.6")
+
+    implementation ("androidx.media3:media3-exoplayer:$mediaVersion")
+    implementation ("androidx.media3:media3-ui:$mediaVersion")
+    implementation ("androidx.media3:media3-exoplayer-dash:$mediaVersion")
 
 }
 
