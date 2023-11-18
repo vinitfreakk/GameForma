@@ -88,6 +88,8 @@ dependencies {
     //animator
     implementation ("jp.wasabeef:recyclerview-animators:4.0.2")
 
+    //corosoul
+    implementation ("com.github.sparrow007:carouselrecyclerview:1.2.6")
 
 }
 

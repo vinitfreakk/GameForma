@@ -2,6 +2,7 @@ package com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_m
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class ShopData(
     @SerializedName("assetPath")
@@ -22,4 +23,4 @@ data class ShopData(
     val newImage: String,
     @SerializedName("newImage2")
     val newImage2: Any
-)
+): Serializable

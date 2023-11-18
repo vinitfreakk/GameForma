@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/weapon"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:src="@drawable/odin"
@@ -27,11 +27,10 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginTop="-250dp"
-            android:background="@drawable/gradient_bg"
-            app:layout_constraintTop_toBottomOf="@+id/imageView">
+            android:background="@drawable/gradient_bg">
         </View>
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/weapon_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Odin"
@@ -42,5 +41,13 @@
             android:layout_marginLeft="10dp"
             android:fontFamily="@font/valofont"/>
     </LinearLayout>
+
+    <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+        android:id="@+id/skins_rv"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_m
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Chroma(
     @SerializedName("assetPath")
@@ -18,4 +19,4 @@ data class Chroma(
     val swatch: String,
     @SerializedName("uuid")
     val uuid: String
-)
+): Serializable

@@ -25,4 +25,4 @@ data class Data(
     val uuid: String,
     @SerializedName("weaponStats")
     val weaponStats: com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_model.WeaponStats
-): Serializable
+):Serializable

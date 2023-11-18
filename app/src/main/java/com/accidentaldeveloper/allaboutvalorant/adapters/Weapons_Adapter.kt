@@ -43,6 +43,7 @@ class Weapons_Adapter(val weaponsList: List<Data>):RecyclerView.Adapter<Weapons_
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, Weapons_Deatils_Activity::class.java)
             intent.putExtra("weapon_data", position)
+            intent.putExtra("data",weaponsList[position])
             holder.itemView.context.startActivity(intent)
         }
     }

@@ -2,6 +2,7 @@ package com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_m
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Skin(
     @SerializedName("assetPath")
@@ -22,4 +23,4 @@ data class Skin(
     val uuid: String,
     @SerializedName("wallpaper")
     val wallpaper: String
-)
+): Serializable

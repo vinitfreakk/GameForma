@@ -2,6 +2,7 @@ package com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_m
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class WeaponStats(
     @SerializedName("adsStats")
@@ -34,4 +35,4 @@ data class WeaponStats(
     val shotgunPelletCount: Int,
     @SerializedName("wallPenetration")
     val wallPenetration: String
-)
+): Serializable

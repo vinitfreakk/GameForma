@@ -2,6 +2,7 @@ package com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_m
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class DamageRange(
     @SerializedName("bodyDamage")
@@ -14,4 +15,4 @@ data class DamageRange(
     val rangeEndMeters: Int,
     @SerializedName("rangeStartMeters")
     val rangeStartMeters: Int
-)
+): Serializable

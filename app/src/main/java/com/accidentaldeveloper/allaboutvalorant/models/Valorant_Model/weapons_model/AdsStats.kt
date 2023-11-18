@@ -2,6 +2,7 @@ package com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_m
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class AdsStats(
     @SerializedName("burstCount")
@@ -14,4 +15,4 @@ data class AdsStats(
     val runSpeedMultiplier: Double,
     @SerializedName("zoomMultiplier")
     val zoomMultiplier: Double
-)
+): Serializable
