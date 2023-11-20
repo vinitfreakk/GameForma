@@ -144,6 +144,7 @@ class SkinsAdapter(val skinsList:List<Skin>):RecyclerView.Adapter<SkinsAdapter.m
         }
     }*/
 
+    //working fine with media controller but some issue with lower android version
     override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
         Glide.with(holder.skinImage).load(skinsList[position].displayIcon).into(holder.skinImage)
         holder.skinname.text = skinsList[position].displayName
@@ -202,16 +203,6 @@ class SkinsAdapter(val skinsList:List<Skin>):RecyclerView.Adapter<SkinsAdapter.m
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
 
 
     inner class mySkinsViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
