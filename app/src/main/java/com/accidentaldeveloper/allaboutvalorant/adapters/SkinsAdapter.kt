@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide
 import com.jackandphantom.carouselrecyclerview.view.ReflectionImageView
 import android.content.Context
 import android.os.Handler
+import android.widget.MediaController
 import android.widget.ProgressBar
 
 class SkinsAdapter(val skinsList:List<Skin>):RecyclerView.Adapter<SkinsAdapter.mySkinsViewHolder>() {
@@ -30,69 +31,7 @@ class SkinsAdapter(val skinsList:List<Skin>):RecyclerView.Adapter<SkinsAdapter.m
       return skinsList.size
     }
 
-   /* override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
-         Glide.with(holder.skinImage).load(skinsList[position].displayIcon).into(holder.skinImage)
-        holder.skinname.text = skinsList[position].displayName
-        val builder = AlertDialog.Builder(context,R.style.YourThemeName)
-        val dialogView = LayoutInflater.from(context).inflate(R.layout.custom_video_preview,null)
-        val cardView: CardView = dialogView.findViewById(R.id.viddo_preview_card)
-        val VideoView: VideoView =  dialogView.findViewById(R.id.video_preview)
-        val url = Uri.parse(skinsList[position].levels.get(skinsList[position].levels.size-1).streamedVideo)
-        holder.skincard.setOnClickListener {
-            if(url!=null){
-                VideoView.setVideoURI(url)
-                VideoView.start()
-                builder.setView(dialogView)
-                builder.setCancelable(true)
-                builder.show()
-            }else{
-                Toast.makeText(holder.itemView.context, "Video Not Found", Toast.LENGTH_SHORT).show()
-            }
 
-        }
-    }*/
-
-    //trial 2 working
-/*   override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
-       Glide.with(holder.skinImage).load(skinsList[position].displayIcon).into(holder.skinImage)
-       holder.skinname.text = skinsList[position].displayName
-
-       val builder = AlertDialog.Builder(holder.itemView.context, R.style.YourThemeName)
-       val dialogView = LayoutInflater.from(holder.itemView.context).inflate(R.layout.custom_video_preview, null)
-
-       val cardView: CardView = dialogView.findViewById(R.id.viddo_preview_card)
-       val videoView: VideoView = dialogView.findViewById(R.id.video_preview)
-       val progressBar: ProgressBar = dialogView.findViewById(R.id.progressBar)
-
-       val url = Uri.parse(skinsList[position].levels.lastOrNull()?.streamedVideo ?: "")
-
-       holder.skincard.setOnClickListener {
-           if (url.toString().isNotBlank()) {
-               // Show the progress bar
-               progressBar.visibility = View.VISIBLE
-
-               videoView.setVideoURI(url)
-               videoView.setOnPreparedListener { mp ->
-                   // Hide the progress bar when the video is prepared and starts playing
-                   progressBar.visibility = View.GONE
-                   mp.start()
-               }
-
-               // Other video setup code (if needed)
-
-               builder.setView(dialogView)
-               val alertDialog = builder.create()
-               alertDialog.setCancelable(true)
-               alertDialog.setOnDismissListener {
-                   // Release resources associated with VideoView when dialog is dismissed
-                   videoView.stopPlayback()
-               }
-               alertDialog.show()
-           } else {
-               Toast.makeText(holder.itemView.context, "Video Not Found", Toast.LENGTH_SHORT).show()
-           }
-       }
-   }*/
 
     //workin very good
     /*override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
@@ -137,74 +76,9 @@ class SkinsAdapter(val skinsList:List<Skin>):RecyclerView.Adapter<SkinsAdapter.m
         }
     }*/
 
-     //changes required
-   /* override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
-        Glide.with(holder.skinImage).load(skinsList[position].displayIcon).into(holder.skinImage)
-        holder.skinname.text = skinsList[position].displayName
-
-        val builder = AlertDialog.Builder(holder.itemView.context, R.style.YourThemeName)
-        val dialogView = LayoutInflater.from(holder.itemView.context).inflate(R.layout.custom_video_preview, null)
-
-
-        val cardView: CardView = dialogView.findViewById(R.id.viddo_preview_card)
-        val videoView: VideoView = dialogView.findViewById(R.id.video_preview)
-        val progressBar: ProgressBar = dialogView.findViewById(R.id.progressBar)
-
-        val url = Uri.parse(skinsList[position].levels.lastOrNull()?.streamedVideo ?: "")
-
-        holder.skincard.setOnClickListener {
-            if (url.toString().isNotBlank()) {
-                // Show the progress bar
-                progressBar.visibility = View.VISIBLE
-
-                videoView.setVideoURI(url)
-                videoView.setOnPreparedListener { mp ->
-                    // Hide the progress bar when the video is prepared and starts playing
-                    progressBar.visibility = View.GONE
-                    mp.start()
-                }
-
-                videoView.setOnCompletionListener {
-                    // Video playback completed, show progress bar
-                    progressBar.visibility = View.VISIBLE
-                    // Add a delay to make sure the progress bar is visible for a moment
-                    Handler().postDelayed({
-                        // Dismiss the dialog
-                        progressBar.visibility = View.GONE
-                        builder.create().dismiss()
-                    }, 1000) // You can adjust the delay duration if needed
-                }
-
-                videoView.setOnErrorListener { _, what, extra ->
-                    // Handle video preparation error, show progress bar
-                    progressBar.visibility = View.VISIBLE
-                    Toast.makeText(holder.itemView.context, "Video Error: $what, $extra", Toast.LENGTH_SHORT).show()
-                    // Dismiss the dialog in case of an error
-                    builder.create().dismiss()
-                    true
-                }
-
-                // Other video setup code (if needed)
-
-                builder.setView(dialogView)
-                val alertDialog = builder.create()
-                alertDialog.setCancelable(true)
-                alertDialog.setCanceledOnTouchOutside(false)  // Set this property to false
-                alertDialog.setOnDismissListener {
-                    // Release resources associated with VideoView when dialog is dismissed
-                    videoView.stopPlayback()
-                }
-                alertDialog.show()
-            } else {
-                Toast.makeText(holder.itemView.context, "Video Not Found", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }*/
-
-
     // testing
-    // Inside onBindViewHolder
-    override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
+    //working good without crash
+    /*override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
         Glide.with(holder.skinImage).load(skinsList[position].displayIcon).into(holder.skinImage)
         holder.skinname.text = skinsList[position].displayName
 
@@ -268,7 +142,67 @@ class SkinsAdapter(val skinsList:List<Skin>):RecyclerView.Adapter<SkinsAdapter.m
                 Toast.makeText(holder.itemView.context, "Video Not Found", Toast.LENGTH_SHORT).show()
             }
         }
+    }*/
+
+    override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
+        Glide.with(holder.skinImage).load(skinsList[position].displayIcon).into(holder.skinImage)
+        holder.skinname.text = skinsList[position].displayName
+
+        val builder = AlertDialog.Builder(holder.itemView.context, R.style.YourThemeName)
+
+        val url = Uri.parse(skinsList[position].levels.lastOrNull()?.streamedVideo ?: "")
+
+        holder.skincard.setOnClickListener {
+            if (url.toString().isNotBlank()) {
+                val dialogView = LayoutInflater.from(holder.itemView.context).inflate(R.layout.custom_video_preview, null)
+
+                val cardView: CardView = dialogView.findViewById(R.id.viddo_preview_card)
+                val videoView: VideoView = dialogView.findViewById(R.id.video_preview)
+                val progressBar: ProgressBar = dialogView.findViewById(R.id.progressBar)
+
+                val mediaController = MediaController(holder.itemView.context)
+                mediaController.setAnchorView(videoView)
+                videoView.setMediaController(mediaController)
+
+                progressBar.visibility = View.VISIBLE
+
+                videoView.setVideoURI(url)
+                videoView.setOnPreparedListener { mp ->
+                    progressBar.visibility = View.GONE
+                    mp.start()
+                }
+
+                builder.setView(dialogView)
+                val alertDialog = builder.create()
+                alertDialog.setCancelable(true)
+                alertDialog.setCanceledOnTouchOutside(false)
+
+                videoView.setOnCompletionListener {
+                    progressBar.visibility = View.VISIBLE
+                    Handler().postDelayed({
+                        progressBar.visibility = View.GONE
+                        alertDialog.dismiss()
+                    }, 1000)
+                }
+
+                videoView.setOnErrorListener { _, what, extra ->
+                    progressBar.visibility = View.VISIBLE
+                    Toast.makeText(holder.itemView.context, "Video Error: $what, $extra", Toast.LENGTH_SHORT).show()
+                    alertDialog.dismiss()
+                    true
+                }
+
+                alertDialog.setOnDismissListener {
+                    videoView.stopPlayback()
+                }
+
+                alertDialog.show()
+            } else {
+                Toast.makeText(holder.itemView.context, "Video Not Found", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
+
 
 
 
