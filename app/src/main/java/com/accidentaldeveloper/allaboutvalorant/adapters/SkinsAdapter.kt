@@ -95,7 +95,7 @@ class SkinsAdapter(val skinsList:List<Skin>):RecyclerView.Adapter<SkinsAdapter.m
    }*/
 
     //workin very good
-    override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
+    /*override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
         Glide.with(holder.skinImage).load(skinsList[position].displayIcon).into(holder.skinImage)
         holder.skinname.text = skinsList[position].displayName
 
@@ -135,7 +135,7 @@ class SkinsAdapter(val skinsList:List<Skin>):RecyclerView.Adapter<SkinsAdapter.m
                 Toast.makeText(holder.itemView.context, "Video Not Found", Toast.LENGTH_SHORT).show()
             }
         }
-    }
+    }*/
 
      //changes required
    /* override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
@@ -200,6 +200,78 @@ class SkinsAdapter(val skinsList:List<Skin>):RecyclerView.Adapter<SkinsAdapter.m
             }
         }
     }*/
+
+
+    // testing
+    // Inside onBindViewHolder
+    override fun onBindViewHolder(holder: mySkinsViewHolder, position: Int) {
+        Glide.with(holder.skinImage).load(skinsList[position].displayIcon).into(holder.skinImage)
+        holder.skinname.text = skinsList[position].displayName
+
+        val builder = AlertDialog.Builder(holder.itemView.context, R.style.YourThemeName)
+
+        val url = Uri.parse(skinsList[position].levels.lastOrNull()?.streamedVideo ?: "")
+
+        holder.skincard.setOnClickListener {
+            if (url.toString().isNotBlank()) {
+                // Create a new dialogView instance each time
+                val dialogView = LayoutInflater.from(holder.itemView.context).inflate(R.layout.custom_video_preview, null)
+
+                val cardView: CardView = dialogView.findViewById(R.id.viddo_preview_card)
+                val videoView: VideoView = dialogView.findViewById(R.id.video_preview)
+                val progressBar: ProgressBar = dialogView.findViewById(R.id.progressBar)
+
+                // Show the progress bar
+                progressBar.visibility = View.VISIBLE
+
+                videoView.setVideoURI(url)
+                videoView.setOnPreparedListener { mp ->
+                    // Hide the progress bar when the video is prepared and starts playing
+                    progressBar.visibility = View.GONE
+                    mp.start()
+                }
+
+                // Other video setup code (if needed)
+
+                builder.setView(dialogView)
+                val alertDialog = builder.create()
+                alertDialog.setCancelable(true)
+                alertDialog.setCanceledOnTouchOutside(false)  // Set this property to false
+
+                videoView.setOnCompletionListener {
+                    // Video playback completed, show progress bar
+                    progressBar.visibility = View.VISIBLE
+                    // Add a delay to make sure the progress bar is visible for a moment
+                    Handler().postDelayed({
+                        // Dismiss the dialog
+                        progressBar.visibility = View.GONE
+                        alertDialog.dismiss()
+                    }, 1000) // You can adjust the delay duration if needed
+                }
+
+                videoView.setOnErrorListener { _, what, extra ->
+                    // Handle video preparation error, show progress bar
+                    progressBar.visibility = View.VISIBLE
+                    Toast.makeText(holder.itemView.context, "Video Error: $what, $extra", Toast.LENGTH_SHORT).show()
+                    // Dismiss the dialog in case of an error
+                    alertDialog.dismiss()
+                    true
+                }
+
+                alertDialog.setOnDismissListener {
+                    // Release resources associated with VideoView when dialog is dismissed
+                    videoView.stopPlayback()
+                }
+
+                alertDialog.show()
+            } else {
+                Toast.makeText(holder.itemView.context, "Video Not Found", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+
+
 
 
 
