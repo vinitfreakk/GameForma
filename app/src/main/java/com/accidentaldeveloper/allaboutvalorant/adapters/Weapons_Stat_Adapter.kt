@@ -23,8 +23,7 @@ class Weapons_Stat_Adapter(private val weapon_stats_list: List<Data>) :
 
     override fun onBindViewHolder(holder: MyWeaponStatsViewHolder, position: Int) {
          //holder.weapons_name.text = weapon_stats_list[position]
-        holder.weapon_stats_value.text = weapon_stats_list[position].weaponStats.toString()
-        holder.weapons_name.text = weapon_stats_list[position].weaponStats.toString()
+
     }
 
     override fun getItemCount(): Int {
@@ -33,7 +32,6 @@ class Weapons_Stat_Adapter(private val weapon_stats_list: List<Data>) :
 
     inner class MyWeaponStatsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
           val weapons_card = itemView.findViewById<CardView>(R.id.weapon_stats_cardview)
-          val weapons_name = itemView.findViewById<TextView>(R.id.weapon_stats_name)
-          val weapon_stats_value = itemView.findViewById<TextView>(R.id.weapon_stats_value)
+
     }
 }

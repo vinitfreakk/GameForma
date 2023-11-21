@@ -3,37 +3,393 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/weapon_stats_cardview"
     android:layout_margin="10dp"
-    android:layout_width="140dp"
+    android:layout_width="match_parent"
     android:elevation="10dp"
     app:cardBackgroundColor="@color/valo_red"
-    android:layout_height="140dp">
-
-    <LinearLayout
+    android:layout_height="match_parent">
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:id="@+id/weapon_stats_name"
-            android:layout_width="match_parent"
-            android:text="stat_name"
-            android:fontFamily="@font/valofont"
-            android:textSize="12sp"
-            android:textColor="@color/white"
-            android:gravity="center"
-            android:layout_height="40dp"/>
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_margin="10dp">
 
-        <TextView
-            android:id="@+id/weapon_stats_value"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="stat_name"
-            android:textColor="@color/white"
-            android:fontFamily="@font/valofont"
-            android:textSize="12sp"
-            android:gravity="center"
-            />
-    </LinearLayout>
+       <LinearLayout
+           android:id="@+id/tv_rv__1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toTopOf="parent">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
 
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__1"
+           >
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__3"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__2">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__4"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__3">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__5"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__4">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__6"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__5">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__7"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__6">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__8"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__7">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__9"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__8">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__10"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__9">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__11"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__10">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__12"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__11">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__13"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__12">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/tv_rv__14"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           app:layout_constraintTop_toBottomOf="@+id/tv_rv__13">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+               android:layout_margin="4dp"
+               />
+       </LinearLayout>
+
+
+
+
+
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </com.google.android.material.card.MaterialCardView>
