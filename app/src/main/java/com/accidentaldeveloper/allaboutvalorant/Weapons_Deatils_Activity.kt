@@ -12,11 +12,8 @@ import com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_mo
 import com.bumptech.glide.Glide
 
 
-
-
 class Weapons_Deatils_Activity : AppCompatActivity() {
     lateinit var binding: ActivityWeaponsDeatilsBinding
-
 
 
     // on below line we are creating
@@ -39,20 +36,17 @@ class Weapons_Deatils_Activity : AppCompatActivity() {
 
         Log.d("agentIndex", "onCreate: ${receivedWeaponIndex}")
 
+
+
         val skin_rv = binding.skinsRv
         skin_rv.adapter = SkinsAdapter(receivedWeaponIndex.skins)
         skin_rv.set3DItem(true)
         skin_rv.setInfinite(true)
         skin_rv.setAlpha(true)
-        /*  skin_rv.setFlat(true)
-          skin_rv.setIsScrollingEnabled(true)*/
 
 
         val carouselLayoutManager = skin_rv.getCarouselLayoutManager()
         val currentlyCenterPosition = skin_rv.getSelectedPosition()
-
-
-
 
 
     }

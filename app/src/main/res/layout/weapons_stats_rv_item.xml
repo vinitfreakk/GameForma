@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/weapon_stats_name_cardview"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/weapon_stats_cardview"
+    android:layout_margin="10dp"
     android:layout_width="140dp"
+    android:elevation="10dp"
+    app:cardBackgroundColor="@color/valo_red"
     android:layout_height="140dp">
 
     <LinearLayout
@@ -12,12 +16,23 @@
         <TextView
             android:id="@+id/weapon_stats_name"
             android:layout_width="match_parent"
+            android:text="stat_name"
+            android:fontFamily="@font/valofont"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:gravity="center"
             android:layout_height="40dp"/>
 
         <TextView
             android:id="@+id/weapon_stats_value"
             android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+            android:layout_height="match_parent"
+            android:text="stat_name"
+            android:textColor="@color/white"
+            android:fontFamily="@font/valofont"
+            android:textSize="12sp"
+            android:gravity="center"
+            />
     </LinearLayout>
 
 

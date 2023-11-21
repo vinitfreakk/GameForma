@@ -23,4 +23,4 @@ data class Skin(
     val uuid: String,
     @SerializedName("wallpaper")
     val wallpaper: String
-): Serializable
+):Serializable

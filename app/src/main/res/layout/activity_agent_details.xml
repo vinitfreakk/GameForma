@@ -24,7 +24,7 @@
             android:elevation="30dp"
             android:src="@drawable/omen1" />
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/deatils_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -75,7 +75,7 @@
             </LinearLayout>
 
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
 
     </LinearLayout>
