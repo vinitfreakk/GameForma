@@ -72,17 +72,20 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="weapons stats"
-               android:textSize="10sp"
+               android:textSize="20sp"
                android:letterSpacing="0.2"
                android:layout_marginTop="8dp"
                android:textColor="@color/white"
+               android:fontFamily="@font/valofont"
                android:layout_gravity="center_horizontal"
 
                />
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                >
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -101,15 +104,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"
                             android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/Category"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"
                             android:layout_margin="4dp"
                             />
                     </LinearLayout>
@@ -128,16 +138,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
-                            android:layout_margin="4dp"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"                            android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/firerate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
-                            android:layout_margin="4dp"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"                            android:layout_margin="4dp"
                             />
                     </LinearLayout>
 
@@ -154,16 +169,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
-                            android:layout_margin="4dp"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"                            android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/magzineSize"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
-                            android:layout_margin="4dp"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"                            android:layout_margin="4dp"
                             />
                     </LinearLayout>
 
@@ -180,16 +200,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
-                            android:layout_margin="4dp"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"                            android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/runspeedmultiplier"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
-                            android:layout_margin="4dp"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"                            android:layout_margin="4dp"
                             />
                     </LinearLayout>
 
@@ -206,16 +231,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
-                            android:layout_margin="4dp"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"                            android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/equipTimeSeconds"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
-                            android:layout_margin="4dp"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"                            android:layout_margin="4dp"
                             />
                     </LinearLayout>
 
@@ -232,15 +262,21 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
-                            android:layout_margin="4dp"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"                             android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/reloadTimeSeconds"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"
                             android:layout_margin="4dp"
                             />
                     </LinearLayout>
@@ -258,15 +294,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"
                             android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/shotgunPelletCount"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"
                             android:layout_margin="4dp"
                             />
                     </LinearLayout>
@@ -284,15 +327,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"
                             android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/firstBulletAccuracy"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"
                             android:layout_margin="4dp"
                             />
                     </LinearLayout>
@@ -310,15 +360,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"
                             android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/wallPenetration"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"
                             android:layout_margin="4dp"
                             />
                     </LinearLayout>
@@ -336,15 +393,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"
                             android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/feature"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"
                             android:layout_margin="4dp"
                             />
                     </LinearLayout>
@@ -362,15 +426,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"
                             android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/fireMode"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"
                             android:layout_margin="4dp"
                             />
                     </LinearLayout>
@@ -388,15 +459,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"
                             android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/altFireType"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"
                             android:layout_margin="4dp"
                             />
                     </LinearLayout>
@@ -414,44 +492,27 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/valo_red"
                             android:layout_margin="4dp"
                             />
 
                         <TextView
+                            android:id="@+id/cost"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
+                            android:text="Category:"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/white"
                             android:layout_margin="4dp"
                             />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:id="@+id/tv_rv__14"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:orientation="horizontal"
-                        android:layout_weight="1"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_rv__13">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
-                            android:layout_margin="4dp"
-                            />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="sdhfkhasdkjfhaskjdhfkjasdhfjkhasdkjhfjksdhfjkhasjkdfhasjkhsdjkfhsjkdfhjksadhjksdhfkhsajkdfh"
-                            android:layout_margin="4dp"
-                            />
-                    </LinearLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </ScrollView>
