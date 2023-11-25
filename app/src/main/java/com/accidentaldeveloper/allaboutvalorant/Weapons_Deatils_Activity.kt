@@ -16,11 +16,6 @@ class Weapons_Deatils_Activity : AppCompatActivity() {
     lateinit var binding: ActivityWeaponsDeatilsBinding
 
 
-    // on below line we are creating
-    // a variable for our video url.
-    var videoUrl =
-        "https://valorant.dyn.riotcdn.net/x/videos/release-07.10/bd9d37c4-4f6f-3766-c134-30b6782e714f_default_universal.mp4"
-
     @SuppressLint("UnsafeOptInUsageError")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,17 +32,32 @@ class Weapons_Deatils_Activity : AppCompatActivity() {
         Log.d("agentIndex", "onCreate: ${receivedWeaponIndex}")
 
 
-
         val skin_rv = binding.skinsRv
         skin_rv.adapter = SkinsAdapter(receivedWeaponIndex.skins)
         skin_rv.set3DItem(true)
         skin_rv.setInfinite(true)
         skin_rv.setAlpha(true)
 
-
         val carouselLayoutManager = skin_rv.getCarouselLayoutManager()
         val currentlyCenterPosition = skin_rv.getSelectedPosition()
 
+        binding.Category.text = receivedWeaponIndex.category ?: "null"
+        binding.firerate.text = receivedWeaponIndex?.weaponStats?.fireRate?.toString() ?: "null"
+        binding.magzineSize.text = receivedWeaponIndex?.weaponStats?.magazineSize?.toString() ?: "null"
+        binding.runspeedmultiplier.text = receivedWeaponIndex?.weaponStats?.runSpeedMultiplier?.toString() ?: "null"
+        binding.equipTimeSeconds.text = receivedWeaponIndex?.weaponStats?.equipTimeSeconds?.toString() ?: "null"
+        binding.reloadTimeSeconds.text = receivedWeaponIndex?.weaponStats?.reloadTimeSeconds?.toString() ?: "null"
+        binding.firstBulletAccuracy.text = receivedWeaponIndex?.weaponStats?.firstBulletAccuracy?.toString() ?: "null"
+        binding.shotgunPelletCount.text = receivedWeaponIndex?.weaponStats?.shotgunPelletCount?.toString() ?: "null"
+        binding.wallPenetration.text = receivedWeaponIndex?.weaponStats?.wallPenetration?.toString() ?: "null"
+        binding.fireMode.text = receivedWeaponIndex?.weaponStats?.fireMode?.toString() ?: "null"
+        binding.altFireType.text = receivedWeaponIndex?.weaponStats?.altFireType?.toString() ?: "null"
+        binding.cost.text = receivedWeaponIndex?.shopData?.cost?.toString() ?: "null"
+
+
+
 
     }
+
+
 }
