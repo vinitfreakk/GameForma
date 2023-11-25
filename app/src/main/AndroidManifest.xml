@@ -16,6 +16,9 @@
         android:theme="@style/Theme.AllAboutValorant"
         tools:targetApi="31">
         <activity
+            android:name=".MmoNewsActivity"
+            android:exported="false" />
+        <activity
             android:name=".Weapons_Deatils_Activity"
             android:exported="false" />
         <activity

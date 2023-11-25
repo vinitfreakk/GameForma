@@ -34,19 +34,6 @@ class MapsAdapter(val mapsList: List<Data>) : RecyclerView.Adapter<MapsAdapter.m
         )
 
         Glide.with(holder.map_image).load(mapsList[position].splash).into(holder.map_image)
-        /*holder.maps_layout.setOnLongClickListener {
-            recyclerView.suppressLayout(true)
-            recyclerView.alpha = 0.5f
-            frameLayout.visibility = View.VISIBLE
-            true
-        }
-
-
-        frameLayout.setOnClickListener {
-            recyclerView.alpha = 1f
-            recyclerView.suppressLayout(false)
-            frameLayout.visibility = View.GONE
-        }*/
 
         holder.maps_layout.setOnClickListener {
             val builder = AlertDialog.Builder(it.context,R.style.YourThemeName)

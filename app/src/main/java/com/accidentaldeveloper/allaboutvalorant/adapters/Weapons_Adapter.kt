@@ -36,12 +36,6 @@ class Weapons_Adapter(val weaponsList: List<Data>):RecyclerView.Adapter<Weapons_
                    R.anim.scale_up
                )
            )
-       /* holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context,Weapons_Deatils_Activity::class.java)
-            intent.putExtra("weapon_data",weaponsList[position])
-            holder.itemView.context.startActivity(intent)
-
-        }*/
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, Weapons_Deatils_Activity::class.java)

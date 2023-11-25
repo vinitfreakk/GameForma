@@ -1,10 +1,12 @@
 package com.accidentaldeveloper.allaboutvalorant.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.accidentaldeveloper.allaboutvalorant.MmoNewsActivity
 import com.accidentaldeveloper.allaboutvalorant.R
 
 class MMOAdapter(val data:List<String>):RecyclerView.Adapter<MMOAdapter.Myviewholder>(){
@@ -19,6 +21,10 @@ class MMOAdapter(val data:List<String>):RecyclerView.Adapter<MMOAdapter.Myviewho
 
     override fun onBindViewHolder(holder: Myviewholder, position: Int) {
       holder.items.text = data[position]
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.items.context,MmoNewsActivity::class.java)
+             holder.itemView.context.startActivity(intent)
+        }
     }
     override fun getItemCount(): Int {
        return data.size
