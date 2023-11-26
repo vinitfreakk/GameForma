@@ -12,9 +12,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+
 @HiltViewModel
-class News_ViewModel @Inject constructor(private val repository: MMO_Repository):ViewModel() {
-    val mutableLiveData = MutableLiveData<News_response> ()
+class News_ViewModel @Inject constructor(private val repository: MMO_Repository) : ViewModel() {
+    val mutableLiveData = MutableLiveData<News_response>()
     val liveData: LiveData<News_response> = mutableLiveData
 
     init {
@@ -32,4 +33,35 @@ class News_ViewModel @Inject constructor(private val repository: MMO_Repository)
             Log.e("error in news viewmodel", "getNewsFeed: ${e.message}")
         }
     }
+
+    // Function to remove HTML tags from a given string
+    fun removeHtmlTags(input: String): String {
+        return input.replace(Regex("<[^>]*>"), "")
+    }
+
+    // Function to process HTML content in the LiveData
+    fun processHtmlContent(newsResponse: News_response): News_response {
+        // Process each item in the list
+        val processedItems = newsResponse.map { item ->
+            val processedTitle = removeHtmlTags(item.title)
+            val processedContent = removeHtmlTags(item.articleContent)
+
+            // Create a new News_response_item with processed data
+            News_response_item(
+                articleContent = processedContent,
+                articleUrl = item.articleUrl,
+                id = item.id,
+                mainImage = item.mainImage,
+                shortDescription = item.shortDescription,
+                thumbnail = item.thumbnail,
+                title = processedTitle
+            )
+        }
+
+        // Create a new News_response with processed items
+        return News_response().apply {
+            addAll(processedItems)
+        }
+    }
 }
+

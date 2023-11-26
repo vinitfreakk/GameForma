@@ -20,8 +20,8 @@ class NewsAdapterPager(private val newslist: List<News_response_item>) :
     }
 
     override fun onBindViewHolder(holder: MyNewsViewHolder, position: Int) {
-       holder.news_headline.text = newslist[position].articleContent.toString()
-        holder.news_disp.text = newslist[position].shortDescription
+       holder.news_headline.text = newslist[position].shortDescription
+        holder.news_disp.text = newslist[position].articleContent
         Glide.with(holder.news_img).load(newslist[position].mainImage).into(holder.news_img)
     }
 

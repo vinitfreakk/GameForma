@@ -8,7 +8,7 @@ import retrofit2.http.GET
 
 
 interface MMOApiService {
-    @GET(AppConstant.MMO_BASE_URL)
+    @GET(AppConstant.NEWS_END_POINTS)
     suspend fun getNewsFeed(): Response<News_response>
 
 }
