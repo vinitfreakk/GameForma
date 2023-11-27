@@ -69,13 +69,16 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
 
                 <TextView
                     android:id="@+id/news_disp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:letterSpacing="0.1"
                     android:text="ljsdhfkjhsdkjfhsdjkhfjksahdfjkhasdjkfhjkasdhfjkshdjkfhsdjkhfjksadhfjkashdjkfhasjkdfhkjasdhgjksahdjkfhasdjkfhasjkdhfjkassdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfsadfasdfasdfasdfasdfasdfasdfasdfgsdfgdsfgdsfgsdfgsdfasdfasdfsad"
                     android:textColor="@color/white" />

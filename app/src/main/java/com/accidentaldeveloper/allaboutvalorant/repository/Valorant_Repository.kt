@@ -1,9 +1,11 @@
 package com.accidentaldeveloper.allaboutvalorant.repository
 
 import com.accidentaldeveloper.allaboutvalorant.api.ValorantApiService
+import com.accidentaldeveloper.allaboutvalorant.helper.ApiAnnotation
 import javax.inject.Inject
+import javax.inject.Named
 
-class Valorant_Repository @Inject constructor(val apiService: ValorantApiService) {
+class Valorant_Repository @Inject constructor(@ApiAnnotation val apiService: ValorantApiService) {
 
     suspend fun getAgentsData() = apiService.getAgents()
 
