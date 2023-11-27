@@ -1,5 +1,7 @@
 package com.accidentaldeveloper.allaboutvalorant.adapters
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +25,24 @@ class NewsAdapterPager(private val newslist: List<News_response_item>) :
        holder.news_headline.text = newslist[position].shortDescription
         holder.news_disp.text = newslist[position].articleContent
         Glide.with(holder.news_img).load(newslist[position].mainImage).into(holder.news_img)
+        holder.shareImg.setOnClickListener {
+            val sharingIntent = Intent(Intent.ACTION_SEND)
+            sharingIntent.type = "text/plain"
+            val shareBody = "Check This out ${newslist[position].articleUrl}"
+            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject Here")
+            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
+            holder.shareImg.context.startActivity(Intent.createChooser(sharingIntent, "Share via"))
+        }
+
+        holder.redirect.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(newslist[position].articleUrl))
+            try {
+                holder.redirect.context.startActivity(intent)
+            } catch (e: android.content.ActivityNotFoundException) {
+                intent.data = Uri.parse(newslist[position].articleUrl)
+                holder.redirect.context.startActivity(intent)
+            }
+        }
     }
 
     override fun getItemCount(): Int {
@@ -33,5 +53,7 @@ class NewsAdapterPager(private val newslist: List<News_response_item>) :
         val news_disp = itemview.findViewById<TextView>(R.id.news_disp)
         val news_headline = itemview.findViewById<TextView>(R.id.news_headline)
         val news_img = itemview.findViewById<ImageView>(R.id.news_img)
+        val shareImg = itemview.findViewById<ImageView>(R.id.share_img)
+        val redirect = itemview.findViewById<ImageView>(R.id.more_info)
     }
 }
