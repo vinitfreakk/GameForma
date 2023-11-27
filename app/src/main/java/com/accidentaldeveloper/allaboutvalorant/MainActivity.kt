@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     lateinit var recyclerView: RecyclerView
 
-    private val list = listOf<String>("News","Giveaways","PC games","Browser games","Categories")
+    private val list = listOf<String>("News","Giveaways","PC games")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
