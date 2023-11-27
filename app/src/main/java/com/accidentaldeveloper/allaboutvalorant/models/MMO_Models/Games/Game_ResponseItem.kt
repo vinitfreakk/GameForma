@@ -1,9 +1,9 @@
-package com.accidentaldeveloper.allaboutvalorant.models.MMO_Models.mmo_platform_games
+package com.accidentaldeveloper.allaboutvalorant.models.MMO_Models.Games
 
 
 import com.google.gson.annotations.SerializedName
 
-data class pltform_game_responseItem(
+data class Game_ResponseItem(
     @SerializedName("developer")
     val developer: String,
     @SerializedName("game_url")
