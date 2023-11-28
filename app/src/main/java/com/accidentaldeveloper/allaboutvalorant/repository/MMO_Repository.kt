@@ -8,4 +8,6 @@ import javax.inject.Named
 
 class MMO_Repository @Inject constructor (@ApiAnnotation private val apiService: MMOApiService) {
     suspend fun getNewsFeed() = apiService.getNewsFeed()
+
+    suspend fun getGiveAway() = apiService.getGiveAwayFeed()
 }

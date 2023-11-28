@@ -73,8 +73,8 @@ dependencies {
     //coroutines lifecycle scope
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
-    // Coroutine Lifecycle Scopes
 
+    // Coroutine Lifecycle Scopes
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-ktx:1.7.2")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")

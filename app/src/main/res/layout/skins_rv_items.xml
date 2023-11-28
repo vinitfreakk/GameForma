@@ -7,13 +7,13 @@
     android:layout_margin="30dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
+
     <com.jackandphantom.carouselrecyclerview.view.ReflectionImageView
         android:id="@+id/gun_skin_img"
         android:layout_width="200dp"
         android:layout_height="290dp"
         android:layout_gravity="center"
-        android:background="@color/valo_balck"
-       />
+        android:background="@color/valo_balck"/>
 
 
     <LinearLayout
