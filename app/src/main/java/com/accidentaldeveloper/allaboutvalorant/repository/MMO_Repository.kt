@@ -10,4 +10,8 @@ class MMO_Repository @Inject constructor (@ApiAnnotation private val apiService:
     suspend fun getNewsFeed() = apiService.getNewsFeed()
 
     suspend fun getGiveAway() = apiService.getGiveAwayFeed()
+
+    suspend fun getGames() = apiService.getGamesFeed()
 }
+
+

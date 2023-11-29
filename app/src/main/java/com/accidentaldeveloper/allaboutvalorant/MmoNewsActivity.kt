@@ -21,10 +21,12 @@ class MmoNewsActivity : AppCompatActivity() {
         setContentView(binding.root)
         val swipe_news = binding.newsFeedPager
         swipe_news.orientation = ViewPager2.ORIENTATION_VERTICAL
-        viewModel.liveData.observe(this, { response ->
+
+
+        viewModel.liveData.observe(this, {response ->
             Log.d("data", "onCreate: ${response}")
             val processedNewsResponse = viewModel.processHtmlContent(response)
-           swipe_news.adapter = NewsAdapterPager(processedNewsResponse)
+            swipe_news.adapter = NewsAdapterPager(processedNewsResponse)
 
         })
     }
