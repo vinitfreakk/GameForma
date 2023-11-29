@@ -4,10 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="@color/valo_balck"
     android:layout_margin="10dp"
+    android:id="@+id/games_card"
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/giveaway_linear_layout"
+        android:id="@+id/game_linear_layout"
         android:layout_width="match_parent"
         android:layout_gravity="center"
         android:gravity="center"
@@ -29,7 +30,7 @@
             android:layout_marginTop="4dp"
             android:fontFamily="@font/poppins_semibold"
             android:gravity="center"
-            android:text="vinit"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="14sp" />
 
@@ -40,7 +41,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:gravity="center"
             android:layout_marginTop="4dp"
-            android:text="vinit"
+            android:text=""
             android:textColor="@color/white"
             android:textSize="20sp" />
 
