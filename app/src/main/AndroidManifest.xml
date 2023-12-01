@@ -19,31 +19,44 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ConnectionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GamesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GiveAwayActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MmoNewsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Weapons_Deatils_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Agent_Details_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".Splashscreen"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ConnectionActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".GamesActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".GiveAwayActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".MmoNewsActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".Weapons_Deatils_Activity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".Agent_Details_Activity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="false">
+
         </activity>
 
         <meta-data
