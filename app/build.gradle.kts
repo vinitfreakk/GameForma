@@ -98,6 +98,10 @@ dependencies {
     implementation ("androidx.media3:media3-ui:$mediaVersion")
     implementation ("androidx.media3:media3-exoplayer-dash:$mediaVersion")
 
+
+    //lottie
+    implementation ("com.airbnb.android:lottie:6.1.0")
+
 }
 
 fun kapt(s: String) {

@@ -2,12 +2,15 @@ package com.accidentaldeveloper.allaboutvalorant
 
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.accidentaldeveloper.allaboutvalorant.adapters.SkinsAdapter
 import com.accidentaldeveloper.allaboutvalorant.databinding.ActivityWeaponsDeatilsBinding
+import com.accidentaldeveloper.allaboutvalorant.helper.NetworkManager
 import com.accidentaldeveloper.allaboutvalorant.models.Valorant_Model.weapons_model.Data
 import com.bumptech.glide.Glide
 
@@ -22,6 +25,16 @@ class Weapons_Deatils_Activity : AppCompatActivity() {
         binding = ActivityWeaponsDeatilsBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+
+        val networkManager = NetworkManager(this)
+        networkManager.observe(this,{
+            if(!it){
+                startActivity(Intent(this,ConnectionActivity::class.java))
+                finish()
+
+            }
+        })
 
 
         val receivedWeaponIndex = intent.getSerializableExtra("data") as? Data

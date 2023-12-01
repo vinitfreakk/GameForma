@@ -1,8 +1,10 @@
 package com.accidentaldeveloper.allaboutvalorant
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
@@ -10,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.allaboutvalorant.adapters.MMOAdapter
 import com.accidentaldeveloper.allaboutvalorant.databinding.ActivityMainBinding
+import com.accidentaldeveloper.allaboutvalorant.helper.NetworkManager
 import com.accidentaldeveloper.allaboutvalorant.viewmodel.valorantViewModel.AgentsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -26,6 +29,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val networkManager = NetworkManager(this)
+        networkManager.observe(this,{
+           if(!it){
+               startActivity(Intent(this,ConnectionActivity::class.java))
+               finish()
+
+           }
+        })
 
         binding.bottomNavigationView.itemTextAppearanceActive = R.style.CustomBottomNavTextAppearance
         binding.bottomNavigationView.itemTextAppearanceInactive = R.style.CustomBottomNavTextAppearance
@@ -73,10 +84,10 @@ class MainActivity : AppCompatActivity() {
             recyclerView = binding.recyler
             recyclerView.adapter = MMOAdapter(list)
             recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-            viewmodel.liveData.observe(this, {
+            /*viewmodel.liveData.observe(this, {
                // Log.d("aajana", "onCreate: ${it.data.get(0).abilities.get(0)}")
                 Log.d("aajana", "onCreate: ${it.data.get(0).abilities}")
-            })
+            })*/
         }
     }
 }

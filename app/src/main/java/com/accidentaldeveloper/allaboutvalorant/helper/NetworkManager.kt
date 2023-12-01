@@ -47,6 +47,7 @@ class NetworkManager(context: Context):LiveData<Boolean>() {
             addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
             addTransportType(NetworkCapabilities.TRANSPORT_ETHERNET)
             addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
+            addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR)
         }.build()
 
        connectivityManager.registerNetworkCallback(requestBuilder,networkCallback)
